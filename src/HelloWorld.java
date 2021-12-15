@@ -28,7 +28,7 @@ public class HelloWorld {
         // If I try to assign the value of 3.14 to the float variable of myNumber,
         // I get an error bc in Java when you type a decimal number it will be interpreted as a
         // double unless you end the number with an f to indicate that you are assigning a float value
-//
+
 //        int x = 5;
 //        System.out.println(x++);
 //        System.out.println(x);
@@ -76,8 +76,9 @@ public class HelloWorld {
 //        -2147483648
 
         System.out.println(x);
-//Whenever I increment past the capacity of the integer types capacity
-// I see the value increment but as a negative value.
+    //Whenever I increment past the capacity of the integer types capacity
+    // I see the value increment but as a negative value.
+
     }
 
 
