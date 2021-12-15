@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.print("Hello ");
@@ -76,8 +78,14 @@ public class HelloWorld {
 //        -2147483648
 
         System.out.println(x);
-    //Whenever I increment past the capacity of the integer types capacity
-    // I see the value increment but as a negative value.
+        //Whenever I increment past the capacity of the integer types capacity
+        // I see the value increment but as a negative value.
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your favorite Color?");
+        String userInput = scanner.nextLine();
+        System.out.printf("Your Favorite color is: %s", userInput);
+
 
     }
 
