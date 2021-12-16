@@ -14,7 +14,7 @@ public class ConsoleExercises {
         String firstWord = scanner.next();
         String secondWord = scanner.next();
         String thirdWord = scanner.next();
-        System.out.printf("%s , %s, %s%n", firstWord,secondWord,thirdWord);
+        System.out.printf("%s%n%s%n%s%n", firstWord,secondWord,thirdWord);
         //Nothing happens if i enter more than three words
         //If i only enter two words and hit return it does not let me continue
         // until i enter all three words
