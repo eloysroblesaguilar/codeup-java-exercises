@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsExcercises {
 //    !. Basic Arithmetic
     public static int add (int num1, int num2) {
@@ -21,7 +23,22 @@ public class MethodsExcercises {
         return num1 % num2;
     }
 
-//    2.
+////    2.
+//    public static int getInteger ( int min, int max) {
+//
+//    }
+
+    public static void diceRolling () {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Please enter the number of sides for the pair of dice");
+        Int sides = sc.nextInt();
+        do {
+            System.out.println("Would you like to commence the rolling?");
+            boolean yes = sc.nextBoolean();
+
+
+        } while (yes);
+    }
 
 
 
