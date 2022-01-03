@@ -31,11 +31,11 @@ public class ControlFlowExcercises {
         System.out.println("Enter in a number!");
         float userNum = sc.nextInt();
 
-        System.out.println("number | squared | cubed");
-        System.out.println("------------------------");
+        System.out.printf("%-7s| %-7s | %-7s%n", "number", "squared", "cubed");
+        System.out.println("--------------------------");
 //3.
         for ( float i = 1; i <= userNum; i++) {
-            System.out.printf("%.0f    | %.0f    | %.0f %n", i, (i * i ), (i * i * i));
+            System.out.printf("%-7.0f| %-7.0f | %-10.0f %n", i, (i * i ), (i * i * i));
         }
 
 //4.
