@@ -27,18 +27,19 @@ public class MethodsExcercises {
 //    public static int getInteger ( int min, int max) {
 //
 //    }
+//    Boolean rollTheDice;
+//    public static void diceRolling () {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Please enter the number of sides for the pair of dice");
+//        int sides = sc.nextInt();
+//        do {
+//            System.out.println("Would you like to commence the rolling?");
+//             rollTheDice = sc.nextBoolean();
+//
+//
+//        } while (rollTheDice);
+//    }
 
-    public static void diceRolling () {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter the number of sides for the pair of dice");
-        Int sides = sc.nextInt();
-        do {
-            System.out.println("Would you like to commence the rolling?");
-            boolean yes = sc.nextBoolean();
-
-
-        } while (yes);
-    }
 
 
 
