@@ -24,21 +24,21 @@ public class MethodsExcercises {
     }
 
     //    2.
-    public static void getInteger(float min, float max) {
+    public static void getInteger(int min, int max) {
         Scanner scan = new Scanner(System.in);
         Boolean yes;
 
-        System.out.printf("Please enter in an integer between %.0f and %.0f %n", min, max);
-        float userInt = scan.nextInt();
+        System.out.printf("Please enter in an integer between %d and %d %n", min, max);
+        int userInt = scan.nextInt();
         if (max >= userInt && userInt >= min) {
-            System.out.printf("%.0f is a valid answer, Thank You!%n", userInt);
+            System.out.printf("%d is a valid answer, Thank You!%n", userInt);
             System.out.println("WOULD YOU LIKE TO CONTNIUE? \nTRUE FOR YES |  FALSE FOR NO ");
             yes = scan.nextBoolean();
             if (yes == true) {
                 getInteger(min, max);
             }
         } else {
-            System.out.printf("%.0f is not a valid answer!%n", userInt);
+            System.out.printf("%d is not a valid answer!%n", userInt);
             System.out.println("WOULD YOU LIKE TO CONTNIUE? \nTRUE FOR YES |  FALSE FOR NO ");
             yes = scan.nextBoolean();
             if (yes == true) {
@@ -48,6 +48,41 @@ public class MethodsExcercises {
 
     }
 
+    //3.
+    public static void factorial() {
+        Scanner scan = new Scanner(System.in);
+        Boolean yes;
+        long userFactorial = 1;
+
+        System.out.println("Please enter in an integer between 1 and 10");
+        int userInt = scan.nextInt();
+
+        if (10 >= userInt && userInt >= 1) {
+            System.out.printf("%d is a valid answer, Thank You!%n", userInt);
+
+            for (int i = 1; i <= userInt; i++) {
+                userFactorial *= i;
+            }
+            System.out.println("...");
+            System.out.printf("%d! = %d%n", userInt, userFactorial);
+
+
+            System.out.println("WOULD YOU LIKE TO CONTNIUE? \nTRUE FOR YES |  FALSE FOR NO ");
+            yes = scan.nextBoolean();
+            if (yes == true) {
+                factorial();
+            }
+        } else {
+            System.out.printf("%.0f is not a valid answer!%n", userInt);
+            System.out.println("WOULD YOU LIKE TO CONTNIUE? \nTRUE FOR YES |  FALSE FOR NO ");
+            yes = scan.nextBoolean();
+            if (yes == true) {
+                factorial();
+            }
+        }
+
+
+    }
 
 
 
@@ -70,7 +105,7 @@ public class MethodsExcercises {
 
 
     public static void main(String[] args) {
-        getInteger(1, 40);
+        factorial();
 
     }
 }
