@@ -2,18 +2,28 @@ import java.util.Scanner;
 
 public class MethodsExcercises {
 
-//    1. Basic Arithmetic
-    public static int add(int num1, int num2) {return num1 + num2;}
+    //    1. Basic Arithmetic
+    public static int add(int num1, int num2) {
+        return num1 + num2;
+    }
 
-    public static int subtract(int num1, int num2) {return num1 - num2;}
+    public static int subtract(int num1, int num2) {
+        return num1 - num2;
+    }
 
-    public static int multiply(int num1, int num2) {return num1 - num2;}
+    public static int multiply(int num1, int num2) {
+        return num1 - num2;
+    }
 
-    public static int divide(int num1, int num2) {return num1 / num2;}
+    public static int divide(int num1, int num2) {
+        return num1 / num2;
+    }
 
-    public static int modulus(int num1, int num2) {return num1 % num2;}
+    public static int modulus(int num1, int num2) {
+        return num1 % num2;
+    }
 
-//    2.
+    //    2.
     public static void getInteger(int min, int max) {
         Scanner scan = new Scanner(System.in);
         Boolean yes;
@@ -37,7 +47,7 @@ public class MethodsExcercises {
         }
     }
 
-//    3.
+    //    3.
     public static void factorial() {
         Scanner scan = new Scanner(System.in);
         Boolean yes;
@@ -71,20 +81,21 @@ public class MethodsExcercises {
         }
     }
 
-//    4.
-    public static int diceRoll(int sides){
+    //    4.
+    public static int diceRoll(int sides) {
         return (int) (1 + Math.random() * sides);
     }
 
-    public static boolean confirm () {
+    public static boolean confirm() {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("WOULD YOU LIKE TO CONTNIUE? \nTRUE FOR YES |  FALSE FOR NO ");
-           boolean yes = scan.nextBoolean();
-            if (yes == false) {
-                confirm();
-            }
-        return yes;
+        boolean yes = scan.nextBoolean();
+        if (yes == false) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public static void diceRolling() {
@@ -96,14 +107,24 @@ public class MethodsExcercises {
         int sides = sc.nextInt();
         System.out.printf("Your dice will have %d sides!%n", sides);
 
-        int roll1 = (int) (1 + java.lang.Math.random() * sides);
+        int roll1 = diceRoll(sides);
         System.out.printf("Your first roll landed on %d%n", roll1);
-        int roll2 = (int) (1 + java.lang.Math.random() * sides);
+        int roll2 = diceRoll(sides);
         System.out.printf("Your second roll landed on %d%n", roll2);
 
+       Boolean userResponse = confirm();
+
+       if (userResponse) {
+           System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+           diceRolling();
+       }
     }
 
-//    public static void main(String[] args) {
-//
-//    }
+
+
+    public static void main(String[] args) {
+        diceRolling();
+
+
+    }
 }
