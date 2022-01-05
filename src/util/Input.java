@@ -6,14 +6,12 @@ public class Input {
     private Scanner sc = new Scanner(System.in);
 
     public String getString() {
-        String userString = sc.nextLine();
-        return userString;
+        return sc.nextLine();
     }
 
     public String getString(String userPrompt) {
         System.out.println(userPrompt);
-        String userString = sc.nextLine();
-        return userString;
+        return sc.nextLine();
     }
 
     public boolean yesNo() {
@@ -35,7 +33,7 @@ public class Input {
         }
     }
 
-    public int getInt(int min, int max) {
+    public  int getInt(int min, int max) {
         int userInt = sc.nextInt();
 
         if (max >= userInt && userInt >= min) {
@@ -61,8 +59,7 @@ public class Input {
     }
 
     public int getInt() {
-        int userInt = sc.nextInt();
-        return userInt;
+        return sc.nextInt();
     }
 
     public int getInt(String userPrompt) {
@@ -79,8 +76,8 @@ public class Input {
         } else {
             System.out.printf("Please make sure the double you entered is between %d and %d.%n", min, max);
             getDouble(min, max);
+            return 0;
         }
-        return 0;
     }
 
     public double getDouble(double min, double max, String userPrompt) {
@@ -92,19 +89,17 @@ public class Input {
         } else {
             System.out.printf("Please make sure the double you entered is between %d and %d.%n", min, max);
             getDouble(min, max);
+            return 0;
         }
-        return 0;
     }
 
     public double getDouble() {
-        double userDbl = sc.nextDouble();
-        return userDbl;
+        return sc.nextDouble();
     }
 
     public double getDouble(String userPrompt) {
         System.out.println(userPrompt);
-        double userDbl = sc.nextDouble();
-        return userDbl;
+        return sc.nextDouble();
     }
 
 
