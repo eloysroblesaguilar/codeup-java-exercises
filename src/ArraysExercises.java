@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class ArraysExercises {
 
-    1.
+//    1.
     public static Person[] addPerson(Person[] people, Person addedPerson) {
 
 
