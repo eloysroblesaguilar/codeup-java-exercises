@@ -3,7 +3,7 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner sc = new Scanner(System.in);
+    private Scanner sc = new Scanner(System.in).useDelimiter("\n");
 
     public String getString() {
         return sc.nextLine();
@@ -15,7 +15,7 @@ public class Input {
     }
 
     public boolean yesNo() {
-        String userBoolean = sc.nextLine();
+        String userBoolean = sc.next();
         if (userBoolean.equalsIgnoreCase("yes") || userBoolean.equalsIgnoreCase("y")) {
             return true;
         } else {
@@ -25,7 +25,7 @@ public class Input {
 
     public boolean yesNo(String userPrompt) {
         System.out.println(userPrompt);
-        String userBoolean = sc.nextLine();
+        String userBoolean = sc.next();
         if (userBoolean.equalsIgnoreCase("yes") || userBoolean.equalsIgnoreCase("y")) {
             return true;
         } else {

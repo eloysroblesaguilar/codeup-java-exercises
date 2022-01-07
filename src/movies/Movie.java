@@ -29,5 +29,8 @@ public class Movie {
         this.category = category;
     }
 
+    public String toString() {
+        return String.format("%n%s -- %s", name, category);
+    }
 
 }
