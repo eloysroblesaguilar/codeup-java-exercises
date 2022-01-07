@@ -4,7 +4,7 @@ public class ServerNameGenerator {
 
 
 public static String getString (String [] array) {
-    int magicNumber = (int) (1 + Math.random() * array.length);
+    int magicNumber = (int) (Math.random() * array.length);
     System.out.println(array[magicNumber]);
     return array[magicNumber];
 }
