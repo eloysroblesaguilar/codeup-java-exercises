@@ -3,10 +3,10 @@ package shapes;
 public interface Measurable {
 
 
-    public double getPerimeter();
+    double getPerimeter();
 
 
 
-    public double getArea();
+    double getArea();
 
 }
