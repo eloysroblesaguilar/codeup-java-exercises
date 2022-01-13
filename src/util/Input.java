@@ -16,33 +16,29 @@ public class Input {
 
     public boolean yesNo() {
         String userBoolean = sc.next();
-        if (userBoolean.equalsIgnoreCase("yes") || userBoolean.equalsIgnoreCase("y")) {
-            return true;
-        } else {
-            return false;
-        }
+        return userBoolean.equalsIgnoreCase("yes") || userBoolean.equalsIgnoreCase("y");
     }
 
     public boolean yesNo(String userPrompt) {
         System.out.println(userPrompt);
         String userBoolean = sc.next();
-        if (userBoolean.equalsIgnoreCase("yes") || userBoolean.equalsIgnoreCase("y")) {
-            return true;
-        } else {
-            return false;
-        }
+        return userBoolean.equalsIgnoreCase("yes") || userBoolean.equalsIgnoreCase("y");
     }
 
-    public  int getInt(int min, int max) {
-        int userInt = sc.nextInt();
-
-        if (max >= userInt && userInt >= min) {
-            return userInt;
-        } else {
-            System.out.printf("Please make sure the integer you entered is between %d and %d.%n", min, max);
-            getInt(min, max);
+    public int getInt(int min, int max) {
+        try {
+            int userInt = Integer.parseInt(getString());
+            if (max >= userInt && userInt >= min) {
+                return userInt;
+            } else {
+                System.out.printf("Please make sure the integer you entered is between %d and %d.%n", min, max);
+                getInt(min, max);
+            }
+        } catch (Exception e) {
+            System.out.println("That is not an integer");
         }
         return 0;
+
     }
 
     public int getInt(int min, int max, String userPrompt) {
@@ -64,8 +60,7 @@ public class Input {
 
     public int getInt(String userPrompt) {
         System.out.println(userPrompt);
-        int userInt = sc.nextInt();
-        return userInt;
+        return sc.nextInt();
     }
 
     public double getDouble(double min, double max) {
@@ -94,7 +89,13 @@ public class Input {
     }
 
     public double getDouble() {
-        return sc.nextDouble();
+        try {
+            double userDbl = Double.parseDouble(getString());
+            return userDbl;
+        } catch (Exception e) {
+            System.err.println("That is not a double.");
+        }
+        return 0;
     }
 
     public double getDouble(String userPrompt) {

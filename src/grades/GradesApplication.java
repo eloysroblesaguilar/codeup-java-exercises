@@ -11,7 +11,7 @@ public class GradesApplication {
     public static <Int> void gradechecker(HashMap<String, Student> list) {
         Input input = new Input();
 
-        System.out.println("Welcome!\nHere are the GitHub usernames of our students:");
+        System.out.println("\nHere are the GitHub usernames of our students:");
         for (Map.Entry student : list.entrySet()) {
             String name = (String) student.getKey();
             System.out.printf("| %s | ", name);
